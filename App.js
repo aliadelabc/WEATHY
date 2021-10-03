@@ -46,6 +46,7 @@ export default function App() {
   if (currentWeather) {
     return (
       <View style={styles.container}>
+        <StatusBar style="auto" />
         <View style={styles.main}>
           <UnitPicker setUnitSystem={setUnitSystem} unitSystem={unitSystem} />
           <ReloadIcon load={load} />
@@ -60,6 +61,8 @@ export default function App() {
   } else if (errorMessage) {
     return (
       <View style={styles.container}>
+        <StatusBar style="auto" />
+
         <ReloadIcon load={load} />
 
         <Text style={{ ...styles.text, textAlign: "center" }}>
@@ -70,6 +73,8 @@ export default function App() {
   } else {
     return (
       <View style={styles.container}>
+        <StatusBar style="auto" />
+
         <ActivityIndicator color={PRIMARY_COLOR} size="large" />
       </View>
     );
